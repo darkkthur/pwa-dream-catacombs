@@ -1,0 +1,30 @@
+{% load bootstrap5 %}
+{% load static %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg bg-light" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand"id="navbar-logo" href="#">Dream Catacoms</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="">
+            <img  src="{% static '/img/icons/plus-math-arcade/icons8-plus-math-24.png' %}" class="" alt="...">
+
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="~/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Requisitos </a>
+          </li>
+        </ul>
+        <button class="btn btn-light d-flex font-dragon " type="submit" > <span>
+            <img src="{% static '/img/icons/icons8-download-from-cloud-24.png' %}" class="d-block me-3"
+                alt="..."></span> ¡Juega Ahora!</button>
+      </div>
+    </div>
+  </nav>
+{% endblock navbar %}
