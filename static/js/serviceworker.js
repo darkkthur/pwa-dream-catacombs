@@ -17,26 +17,28 @@ const STATIC_FILES_TO_CACHE = [
   '/static/img/catacombs/ss-1.jpg', 
   '/static/img/catacombs/ss-2.jpg', 
   '/static/img/catacombs/ss-3.jpg', 
-  '/static/img/catacombs/ammo/weapon-1.png', 
-  '/static/img/catacombs/ammo/weapon-2.png', 
-  '/static/img/catacombs/ammo/weapon-3.png', 
-  '/static/img/catacombs/ammo/weapon-4.png', 
-  '/static/img/catacombs/ammo/weapon-5.png', 
-  '/static/img/catacombs/ammo/weapon-6.png', 
-  '/static/img/catacombs/ammo/weapon-7.png', 
-  '/static/img/catacombs/ammo/weapon-8.png', 
+  '/static/img/catacombs/weapons/weapon-1.png', 
+  '/static/img/catacombs/weapons/weapon-2.png', 
+  '/static/img/catacombs/weapons/weapon-3.png', 
+  '/static/img/catacombs/weapons/weapon-4.png', 
+  '/static/img/catacombs/weapons/weapon-5.png', 
+  '/static/img/catacombs/weapons/weapon-6.png', 
+  '/static/img/catacombs/weapons/weapon-7.png', 
+  '/static/img/catacombs/weapons/weapon-8.png', 
 
   '/static/img/catacombs/characters/character-1.png', 
   '/static/img/catacombs/characters/character-2.png', 
   '/static/img/catacombs/characters/character-3.png', 
   '/static/img/catacombs/characters/character-4.png', 
+  '/static/img/catacombs/characters/character-5.png', 
+  '/static/img/catacombs/characters/character-6.png', 
 
-  '/static/img/catacombs/enemies/enemy-1.png', 
-  '/static/img/catacombs/enemies/enemy-2.png', 
-  '/static/img/catacombs/enemies/enemy-3.png', 
-  '/static/img/catacombs/enemies/enemy-4.png', 
-  '/static/img/catacombs/enemies/enemy-5.png', 
-  '/static/img/catacombs/enemies/enemy-6.png', 
+  '/static/img/catacombs/villians/villian-1.png', 
+  '/static/img/catacombs/villians/villian-2.png', 
+  '/static/img/catacombs/villians/villian-3.png', 
+  '/static/img/catacombs/villians/villian-4.png', 
+  '/static/img/catacombs/villians/villian-5.png', 
+  '/static/img/catacombs/villians/villian-6.png', 
 
 
   '/static/css/style.css',
@@ -49,55 +51,55 @@ const STATIC_FILES_TO_CACHE = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    // Cache static files on service worker installation
+    // Cachear archivos estáticos en la instalación del service worker
     caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
         return cache.addAll(STATIC_FILES_TO_CACHE);
       })
   );
 
-  // Force the waiting service worker to become the active service worker.
+  // Forzar al service worker en espera a convertirse en el service worker activo.
   self.skipWaiting();
 });
 
 self.addEventListener('activate', function (event) {
-  // Tell the active service worker to take control of the page immediately.
+  // Informar al service worker activo para tomar el control de la página inmediatamente.
   self.clients.claim();
 });
 
 self.addEventListener("fetch", event => {
   event.respondWith(
-    // Try to fetch the requested resource from the cache
+    // Intentar obtener el recurso solicitado desde la caché
     caches.match(event.request)
       .then(response => {
-        // If a cached response is found, return it
+        // Si se encuentra una respuesta en caché, se devuelve
         if (response) {
           return response;
         }
 
-        // If not, fetch the resource from the network
+        // Si no, se obtiene el recurso desde la red
         return fetch(event.request)
           .then(networkResponse => {
-            // Clone the network response before caching and returning it
+            // Clonar la respuesta de la red antes de almacenarla en caché y devolverla
             const clonedResponse = networkResponse.clone();
 
-            // Cache images, CSS, JS, and fonts separately
+            // Almacenar imágenes, CSS, JS y fuentes en cachés separadas
             if (event.request.url.includes('/static/img') ||
               event.request.url.includes('/static/css') ||
               event.request.url.includes('/static/js') ||
               event.request.url.includes('/static/fonts')) {
               caches.open(STATIC_CACHE_NAME)
                 .then(cache => {
-                  // Cache the response with the request as the key
+                  // Almacenar la respuesta en caché con la solicitud como clave
                   cache.put(event.request, clonedResponse);
                 });
             }
 
-            // Return the network response
+            // Devolver la respuesta de la red
             return networkResponse;
           })
           .catch(() => {
-            // If the network fetch fails, respond with a 404 error
+            // Si la obtención desde la red falla, responder con un error 404
             return new Response('Not Found', {
               status: 404,
               statusText: 'Not Found',
