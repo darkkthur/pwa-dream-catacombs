@@ -100,7 +100,11 @@ html {
 
 
 
-
+#character-image{
+    max-width: 100%;
+    min-width:  264px;
+    height: 400px;
+}
 
 
 

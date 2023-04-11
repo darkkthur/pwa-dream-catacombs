@@ -157,8 +157,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # PWA
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
-PWA_APP_NAME = 'Dream Catacombs: Almanac'
-PWA_APP_DESCRIPTION = "Dream Catacombs Almanac"
+PWA_APP_NAME = 'Dream Catacombs'
+PWA_APP_DESCRIPTION = "Dream Catacombs"
 PWA_APP_THEME_COLOR = '#18181B'
 PWA_APP_BACKGROUND_COLOR = '#27272A'
 PWA_APP_DISPLAY = 'standalone'
@@ -168,14 +168,14 @@ PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
 	{
-		'src': 'static/img/icon-160x160.png',
-		'sizes': '160x160'
+		'src': 'static/img/icon-192x192.png',
+		'sizes': '192x192'
 	}
 ]
 PWA_APP_ICONS_APPLE = [
 	{
-		'src': 'static/img/icon-160x160.png',
-		'sizes': '160x160'
+		'src': 'static/img/icon-192x192.png',
+		'sizes': '192x192'
 	}
 ]
 PWA_APP_SPLASH_SCREEN = [

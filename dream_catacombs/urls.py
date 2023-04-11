@@ -31,5 +31,7 @@ urlpatterns = [
 urlpatterns +=  (
     path('', include('Core.urls', namespace='Core')),
     path('Character/', include('Character.urls', namespace='Character')),
+    path('Villian/', include('Villian.urls', namespace='Villian')),
+    path('Item/', include('Item.urls', namespace='Item')),
 )
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

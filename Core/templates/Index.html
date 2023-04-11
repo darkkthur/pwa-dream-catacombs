@@ -6,218 +6,78 @@
 Inicio
 {% endblock title %}
 {% block content %}
-
-<div class="container-fluid  p-2">
-    <!--ARMAS DISPONIBLES-->
-    <div class="row mb-4">
-        <div class="col-md bg-black content-shadow">
-
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img id="preview-image-uno" src="{% static '/img/catacombs/Prota_0_idle.gif' %}" class="d-block  preview-image" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img id="preview-image-dos" src="{% static '/img/catacombs/Prota_1_run.gif' %}" class="d-block preview-image" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img id="preview-image-tres" src="{% static '/img/catacombs/Prota_2_Attack_Normal.gif' %}" class="d-block preview-image " alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon opacity-25" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon opacity-25" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <div class="col-md text-light bg-black content-shadow">
-            <div class="row row-cols-2 g-2 p-2">
-                <div class="col">
-                    <div class="card bg-black flex-row pe-4 ps-4 position-relative h-100" onclick="preview(1)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/army-knife-arcade/icons8-army-knife-64.png' %}" alt="...">
-
-                        </div>
-                        <div class="card-body">
-                            <a href="#" id="knife"
-                                class="stretched-link link-dark text-decoration-none  color-yellow font-dragon ">Cuchilla de
-                                Asalto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black flex-row pe-4 ps-4 h-100"  onclick="preview(2)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/mage-staff-arcade/icons8-mage-staff-64.png' %}" alt="...">
-
-
-                        </div>
-                        <div class="card-body">
-                            <a href="#" id="stick"
-                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Cetro Mágico</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black flex-row pe-4 ps-4 h-100"   onclick="preview(3)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/archer-arcade/icons8-archer-64.png' %}" alt="...">
-
-
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#" id="arch"
-                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Arco de
-                                Caza</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-black flex-row pe-4 ps-4"   onclick="preview(4)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/sword-arcade/icons8-sword-64.png' %}" alt="...">
-
-
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#" id="sword"
-                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Filo de la Verdad</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row p-2 mt-4">
-                <div class="col">
-                    <h3 class="font-ancient text-danger">Descripción</h3>
-                    <p class="lead font-ancient fs-5" id="arma-descripcion">
-                        Esta cuchilla proviene de "La Secta de la Noche", proveniente de un viejo videojuego al que el
-                        protagionista solía jugar con su hermano mayor. Es la primer arma que se otorga dentro del
-                        juego.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md">
-
-        </div>
-    </div>
-    <!--REQUISITOS-->
+<div class="container-fluid">
     <div class="row mt-4">
-        <div class="col-md">
+        <div class="col col-10 m-auto">
+            <div class="row">
+                <div class="col col-7 shadow">
+                    <img src="{% static '/img/catacombs/ss.jpg' %}" class="w-100" alt="">
 
-        </div>
-        <div class="col-md bg-black content-shadow">
-
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img id="preview-image-uno" src="{% static '/img/catacombs/Prota_0_idle.gif' %}" class="d-block " alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img id="preview-image-dos" src="{% static '/img/catacombs/Prota_1_run.gif' %}" class="d-block" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img id="preview-image-tres" src="{% static '/img/catacombs/Prota_2_Attack_Normal.gif' %}" class="d-block " alt="...">
-                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon opacity-25" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon opacity-25" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <div class="col-4 text-light bg-black content-shadow">
-            <div class="row row-cols-2 g-2 p-2">
-                <div class="col">
-                    <div class="card flex-row pe-4 ps-4 position-relative h-100" onclick="preview(1)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/army-knife-arcade/icons8-army-knife-64.png' %}" alt="...">
-
-                        </div>
-                        <div class="card-body">
-                            <a href="#"
-                                class="stretched-link link-dark text-decoration-none text-dark font-dragon ">Cuchilla de
-                                Asalto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row pe-4 ps-4 h-100"  onclick="preview(2)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/mage-staff-arcade/icons8-mage-staff-64.png' %}" alt="...">
-
-
-                        </div>
-                        <div class="card-body">
-                            <a href="#"
-                                class="stretched-link link-dark text-decoration-none text-dark font-dragon ">Bara de
-                                Hechizos</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row pe-4 ps-4 h-100"   onclick="preview(3)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/archer-arcade/icons8-archer-64.png' %}" alt="...">
-
-
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#"
-                                class="stretched-link link-dark text-decoration-none text-dark font-dragon ">Arco de
-                                Caza</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row pe-4 ps-4"   onclick="preview(4)">
-                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
-                            <img src="{% static '/img/icons/sword-arcade/icons8-sword-64.png' %}" alt="...">
-
-
-                        </div>
-                        <div class="card-body">
-
-                            <a href="#"
-                                class="stretched-link link-dark text-decoration-none text-dark font-dragon ">Espada del
-                                Príncipe</a>
+                <div class="col col-5 bg-black  d-flex align-items-center justify-content-center flex-column shadow">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="font-ancient text-center text-info">Comienza la Aventura</h1>
+                            <p class="text-white text-center font-dragon fs-6">¡Elige a tu personaje favorito y descubre su historia! Pero la historia oscura de nuestro protagonista te fascinará. ¿Listo para descubrir los secretos ocultos? ¡Sumérgete en un mundo de misterio y emoción!</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row p-2 mt-4">
-                <div class="col">
-                    <h3 class="font-ancient text-danger">Descripción</h3>
-                    <p class="lead font-ancient fs-5" id="arma-descripcion">
-                        Esta cuchilla proviene de "La Secta de la Noche", proveniente de un viejo videojuego al que el
-                        protagionista solía jugar con su hermano mayor. Es la primer arma que se otorga dentro del
-                        juego.
-                    </p>
+        </div>
+    </div>  
+    <div class="row mt-4">
+        <div class="col col-10 m-auto">
+            <div class="row">
+                <div class="col col-5 bg-black  d-flex align-items-center justify-content-center flex-column shadow">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="font-ancient text-center text-warning">Explora Nuevos Caminos</h1>
+                            <p class="text-white text-center font-dragon fs-6">¡Adéntrate en las tenebrosas catacumbas, explora rutas, encuentra tesoros, pero ten cuidado con los seres malévolos! ¡Descubre los secretos ocultos en una emocionante aventura subterránea!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-7 shadow">
+                    <img src="{% static '/img/catacombs/ss-1.jpg' %}" class="w-100" alt="">
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="row"></div>
-    <div class="row"></div>
-</div>
+    <div class="row mt-4">
+        <div class="col col-10 m-auto">
+            <div class="row">
+                <div class="col col-7 shadow">
+                    <img src="{% static '/img/catacombs/ss-2.jpg' %}" class="w-100" alt="">
 
+                </div>
+                <div class="col col-5 bg-black  d-flex align-items-center justify-content-center flex-column shadow">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="font-ancient text-center text-success">Mejora tus Habilidades</h1>
+                            <p class="text-white text-center font-ancient fs-3">¡Mejora jugando! Logros, habilidades, puntos y monedas. ¡Desbloquea contenido exclusivo y progresa en el juego! ¡Sumérgete en una experiencia única y avanza en tu camino hacia la victoria!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="row mt-4" style="margin-bottom: 96px;">
+        <div class="col col-10 m-auto">
+            <div class="row ">
+                <div class="col col-5 bg-black  d-flex align-items-center justify-content-center flex-column shadow">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="font-ancient text-center text-danger">Derrota Enemigos</h1>
+                            <p class="text-white text-center font-ancient fs-3">¡Enfréntate a villanos, mini jefes y jefes de nivel! Supera desafíos, mejora tus habilidades y conviértete en el campeón del juego. ¡Derrota a tus enemigos y alcanza la victoria!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-7 shadow">
+                    <img src="{% static '/img/catacombs/ss-3.jpg' %}" class="w-100" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

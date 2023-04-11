@@ -3,7 +3,7 @@ body {
     overflow-y: auto;
     min-height: -webkit-fill-available;
     background-color: #FAFAFA !important;
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/catacombs/bg.gif');
 }
 
 
@@ -26,6 +26,10 @@ html {
     font-family: Ancient-Modern-Tales;
     src: url(../fonts/Ancient-Modern-Tales/AncientModernTales-a7Po.ttf);
 }
+@font-face {
+    font-family: Melted Monster;
+    src: url(../fonts/melted_monster/Melted_Monster.ttf);
+}
 
 #navbar-logo {
     font-family: Ancient-Modern-Tales;
@@ -44,6 +48,12 @@ html {
 
 .font-ancient {
     font-family: Ancient-Modern-Tales;
+
+}
+
+.font-melted {
+    font-family: Melted Monster;
+
 
 }
 
@@ -100,7 +110,11 @@ html {
 
 
 
-
+#character-image{
+    max-width: 100%;
+    min-width:  264px;
+    height: 400px;
+}
 
 
 

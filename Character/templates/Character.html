@@ -3,34 +3,111 @@
 {% load static %}
 
 {% block title %}
-Personaje 
+Personajes
 {% endblock title %}
 {% block content %}
-<h1 class="display-1  ">
-    Personajes
-</h1>
-<div class="container-fluid pb-5">
 
-    <div class="row row-cols-1 row-cols-md-5 g-4">
+<div class="container-fluid  p-2" style="margin-bottom: 48px;">
+    <!--ARMAS DISPONIBLES-->
+    <div class="row mb-4">
+        <div class="col-md bg-black content-shadow">
+            <div class="container-fluid d-flex align-items-center justify-content-center">
+                
+                <img id="character-image" src="{% static '/img/catacombs/characters/character-6.png' %}" alt="...">
+            </div>
 
-        <div class="col">
-            <div class="card bg-main   h-100">
-                <img src="{% static '/img/catacombs/Boss_1_run.gif' %}" class="card-img-top p-4" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Lucario</h5>
-                    <span class="badge rounded-pill bg-warning text-bg-light mb-2">Nigromante</span>
-                    <span class="badge rounded-pill bg-danger text-bg-light mb-2">Mago</span>
-                    <span class="badge rounded-pill bg-black text-bg-light mb-2">Oscuro</span>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae!
-                    </p>
+        </div>
+        <div class="col-md text-light bg-black content-shadow">
+            <div class="row row-cols-2 g-2 p-2">
+                <div class="col">
+                    <div class="card bg-black flex-row pe-4 ps-4"   onclick="changeCharacter(6)">
+                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
+
+
+                        </div>
+                        <div class="card-body">
+
+                            <a href="#" id="six"
+                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Kenny</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer text-end">
-                    <button type="button" class="btn btn-outline-info container-fluid stretched-link">Ver</button>
+                <div class="col">
+                    <div class="card bg-black flex-row pe-4 ps-4 position-relative h-100" onclick="changeCharacter(1)">
+                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
 
+                        </div>
+                        <div class="card-body">
+                            <a href="#" id="one"
+                                class="stretched-link link-dark text-decoration-none  color-yellow font-dragon ">Ponny</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-black flex-row pe-4 ps-4 h-100"  onclick="changeCharacter(2)">
+                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
+
+
+                        </div>
+                        <div class="card-body">
+                            <a href="#" id="two"
+                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Duende Sabio</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-black flex-row pe-4 ps-4 h-100"   onclick="changeCharacter(3)">
+                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
+
+
+                        </div>
+                        <div class="card-body">
+
+                            <a href="#" id="three"
+                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Roger</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-black flex-row pe-4 ps-4"   onclick="changeCharacter(4)">
+                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
+
+
+                        </div>
+                        <div class="card-body">
+
+                            <a href="#" id="four"
+                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Lucas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-black flex-row pe-4 ps-4"   onclick="changeCharacter(5)">
+                        <div class="card-img-top d-flex align-items-center justify-content-center w-25">
+
+
+                        </div>
+                        <div class="card-body">
+
+                            <a href="#" id="five"
+                                class="stretched-link link-dark text-decoration-none text-white font-dragon ">Bardo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-2 mt-4">
+                <div class="col">
+                    <h3 class="font-ancient text-danger">Descripción</h3>
+                    <p class="lead font-ancient fs-5" id="arma-descripcion">
+                        Kenny, el genial portador de armas, dominaba el arte de la batalla. Su habilidad y destreza eran asombrosas, convirtiéndolo en un temible adversario. Con su arma a su lado, desafiaba a todos con su valentía y destreza.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+    <!--REQUISITOS-->
 </div>
+
 {% endblock content %}
