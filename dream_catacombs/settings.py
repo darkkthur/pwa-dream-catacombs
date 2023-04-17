@@ -70,7 +70,7 @@ TEMPLATES = [
                 BASE_DIR / 'Core/templates',
                 BASE_DIR / 'Villian/templates', 
                 BASE_DIR / 'Character/templates',
-                BASE_DIR / 'Itemtemplates',
+                BASE_DIR / 'Item/templates',
                 BASE_DIR / 'Feature/templates'
                 ],
         'APP_DIRS': True,
