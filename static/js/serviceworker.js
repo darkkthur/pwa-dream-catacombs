@@ -11,12 +11,12 @@ const STATIC_FILES_TO_CACHE = [
   '/static/img/icons/icons8-download-from-cloud-24.png',
   '/static/img/icons/icons8-google-play-store-24.png',
  
-
   '/static/img/catacombs/bg.gif', 
   '/static/img/catacombs/ss.jpg', 
   '/static/img/catacombs/ss-1.jpg', 
   '/static/img/catacombs/ss-2.jpg', 
   '/static/img/catacombs/ss-3.jpg', 
+
   '/static/img/catacombs/weapons/weapon-1.png', 
   '/static/img/catacombs/weapons/weapon-2.png', 
   '/static/img/catacombs/weapons/weapon-3.png', 
@@ -39,7 +39,6 @@ const STATIC_FILES_TO_CACHE = [
   '/static/img/catacombs/villians/villian-4.png', 
   '/static/img/catacombs/villians/villian-5.png', 
   '/static/img/catacombs/villians/villian-6.png', 
-
 
   '/static/css/style.css',
   '/static/js/script.js',
