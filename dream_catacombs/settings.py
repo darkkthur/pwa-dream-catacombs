@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qt-k2ar6)0(f%2+o8!@)4!^o&-kp08bx3mjyvs@cwn!d3w&s$+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'localhost']
+ALLOWED_HOSTS = ['http://darkkthur.pythonanywhere.com/', 'darkkthur.pythonanywhere.com']
 
 
 # Application definition
@@ -156,7 +156,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # PWA
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
 PWA_APP_NAME = 'Dream Catacombs'
 PWA_APP_DESCRIPTION = "Dream Catacombs"
 PWA_APP_THEME_COLOR = '#18181B'
